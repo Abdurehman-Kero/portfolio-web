@@ -32,6 +32,228 @@
     />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>body {
+  background: #101828;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 1.2s ease-in-out;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.light-theme {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+.color-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.color-toggle button {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.color-toggle button:hover {
+  transform: scale(1.1);
+}
+.light-theme .color-toggle button {
+  border-color: #000;
+}
+.color-toggle .bi-moon-fill {
+  display: block;
+}
+.color-toggle .bi-sun-fill {
+  display: none;
+}
+.light-theme .color-toggle .bi-moon-fill {
+  display: none;
+}
+.light-theme .color-toggle .bi-sun-fill {
+  display: block;
+}
+.header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+.light-theme .header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navmenu a {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+.light-theme .navmenu a {
+  color: #000000;
+}
+.navmenu a:hover,
+.navmenu a.active {
+  color: #4a00e0;
+}
+.mobile-nav-toggle {
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.light-theme .mobile-nav-toggle {
+  color: #000000;
+}
+/* CSS for hover transform */
+.hover-transform {
+  transition: transform 0.5s ease !important; /* Smooth transition for the transform */
+}
+
+.hover-transform:hover {
+  transform: scale(1.2) !important;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+.btn-primary {
+  background: #4a00e0;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn-primary:hover {
+  background: #3500a0;
+}
+.skill-box,
+.portfolio-card,
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.light-theme .skill-box,
+.light-theme .portfolio-card,
+.light-theme .contact-form {
+  background: rgba(0, 0, 0, 0.05);
+}
+.skill-box:hover,
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.progress {
+  position: relative;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.progress-bar {
+  background: #4a00e0;
+  position: relative;
+  text-align: right;
+  padding-right: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact-form .form-control {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+}
+.footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+.light-theme .footer {
+  background: #f8f9fa;
+}
+.social-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.light-theme .social-links a {
+  color: #000000;
+}
+.social-links a:hover {
+  color: #4a00e0;
+}
+.scroll-top {
+  background: #4a00e0;
+  color: #ffffff;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-top:hover {
+  background: #3500a0;
+}
+/* Image Styling for Visibility */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.hero img {
+  width: 500px;
+  border-radius: 10px;
+}
+.portfolio-card img {
+  max-height: 200px;
+  width: 100%;
+  border-radius: 10px;
+}
+.about img {
+  max-width: 350px;
+  border-radius: 10px;
+}
+/* Test change */
+</style>
   </head>
 
   <body>
